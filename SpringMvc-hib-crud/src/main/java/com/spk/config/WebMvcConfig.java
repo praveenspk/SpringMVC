@@ -1,4 +1,4 @@
-package com.huawei.config;
+package com.spk.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.huawei.controller" })
+@ComponentScan(basePackages = { "com.spk.controller" })
 public class WebMvcConfig implements WebMvcConfigurer {
 
 	@Bean
@@ -19,7 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setViewClass(JstlView.class);
-		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setPrefix("/WEB-INF/pages/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 

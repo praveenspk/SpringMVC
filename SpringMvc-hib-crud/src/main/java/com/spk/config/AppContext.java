@@ -1,9 +1,10 @@
-package com.huawei.config;
+package com.spk.config;
 
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:database.properties")
-@ComponentScan(basePackages = { "com.huawei" })
+@ComponentScan(basePackages = { "com.spk" })
 public class AppContext {
 
 	@Autowired
@@ -29,7 +30,7 @@ public class AppContext {
 
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());
-		sessionFactory.setPackagesToScan(new String[] { "com.huawei.entity" });
+		sessionFactory.setPackagesToScan(new String[] { "com.spk.model" });
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		return sessionFactory;
 	}
