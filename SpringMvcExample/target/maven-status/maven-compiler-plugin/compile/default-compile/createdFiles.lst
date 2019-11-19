@@ -1,0 +1,9 @@
+com\huawei\service\CustomerServiceImpl.class
+com\huawei\entity\Customer.class
+com\huawei\config\WebMvcConfig.class
+com\huawei\service\CustomerService.class
+com\huawei\config\AppContext.class
+com\huawei\controller\CustomerController.class
+com\huawei\config\AppInitializer.class
+com\huawei\dao\CustomerDAO.class
+com\huawei\dao\CustomerDAOImpl.class
