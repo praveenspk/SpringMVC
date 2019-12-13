@@ -1,2 +1,3 @@
-# SpringMVC
-springMVC SourceCode
+# spring-mvc-application
+SpringMVC SourceCode
+
